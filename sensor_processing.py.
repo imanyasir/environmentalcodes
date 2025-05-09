@@ -1,0 +1,24 @@
+def calculate_average(values):
+  return sum(values) / len(values)
+
+numbers = [72, 55, 101, 90]
+average = calculate_average(numbers)
+print("Average:", average)
+
+stations = [
+    ['A1', 62],
+    ['B5', 97],
+    ['C3', 155]
+]	
+for station in stations:
+    print(f"{station[0]}->{station[1]}")
+
+def report_status(stations, threshold):
+  for station in stations:
+    name, pm25 = station
+    status = "OK" if pm25 <= threshold else "ALERT"
+    print(f"{name}: {pm25} : {status}")
+	
+report_status(stations, 100)
+
+feat: add sensor processing code from Assignment 2
